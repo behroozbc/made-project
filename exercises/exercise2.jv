@@ -41,7 +41,7 @@ pipeline Exercise2Pipline {
     }
 }
 publish constraint OnlyStartWithVogelsang oftype RegexConstraint{
-    regex:/^Vogelsang [A-Za-z0-9]+/;
+    regex:/^Vogelsang/;
 }
 
 publish constraint ValidGeoId  oftype RegexConstraint {
