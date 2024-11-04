@@ -21,7 +21,7 @@ pipeline Exercise2Pipline {
             "stadtteil" oftype ClearList,
             "standort" oftype text,
             "baumart_botanisch" oftype text,
-            "id" oftype text,
+            "id" oftype GeoFilter,
             "baumfamilie" oftype text,
         ];
     }
@@ -34,8 +34,18 @@ pipeline Exercise2Pipline {
             OnlyStartWithVogelsang
         ];
     }
+    valuetype GeoFilter oftype text{
+        constraints:[
+            ValidGeoId
+        ];
+    }
 }
 publish constraint OnlyStartWithVogelsang oftype RegexConstraint{
     regex:/^Vogelsang [A-Za-z0-9]+/;
 }
 
+publish constraint ValidGeoId  oftype RegexConstraint {
+  
+        regex: /^\d{1,3}\.\d+,\s?\d{1,3}\.\d+$/;
+    
+}
