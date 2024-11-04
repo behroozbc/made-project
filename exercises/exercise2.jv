@@ -18,7 +18,7 @@ pipeline Exercise2Pipline {
     block DataTableInterpreter oftype TableInterpreter{
         columns:[
             "lfd_nr" oftype integer,
-            "stadtteil" oftype text,
+            "stadtteil" oftype ClearList,
             "standort" oftype text,
             "baumart_botanisch" oftype text,
             "id" oftype text,
@@ -29,4 +29,11 @@ pipeline Exercise2Pipline {
         table:'trees';
         file:'trees.sqlite';
     }
+    valuetype ClearList oftype text{
+        constraints:[
+            OnlyStartWithVogelsang
+        ];
+    }
 }
+constraint OnlyStartWithVogelsang on text: value matches /Vogelsang [A-Za-z0-9]+/i/;
+
