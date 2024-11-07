@@ -7,13 +7,12 @@ colder days, cheaper tickets?
 ## Main Question
 
 <!-- Think about one main question you want to answer based on the data. -->
-1. Is the weather conditions influnce on plan ticket?
+1. Is the weather conditions influnce on plan ticket price?
 
 ## Description
 
 <!-- Describe your data science project in max. 200 words. Consider writing about why and how you attempt it. -->
-XY is an important problem, because... This projects analyzes XY, using method A. The results can give insights into...
-
+The flight ticket' prices vary in diffrent time of year. I want to find a relation between the weather temperature and the price of tickets. 
 ## Datasources
 
 <!-- Describe each datasources you plan to use in a section. Use the prefic "DatasourceX" where X is the id of the datasource. -->
