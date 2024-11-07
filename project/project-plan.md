@@ -18,17 +18,17 @@ The flight ticket' prices vary in diffrent time of year. I want to find a relati
 <!-- Describe each datasources you plan to use in a section. Use the prefic "DatasourceX" where X is the id of the datasource. -->
 
 ### Datasource1: ExampleSource
-* Metadata URL: https://mobilithek.info/offers/-6901989592576801458
-* Data URL: https://raw.githubusercontent.com/od-ms/radverkehr-zaehlstellen/main/100035541/2019-01.csv
+* Metadata URL: https://pirateweather.net/
+* Data URL: https://www.kaggle.com/datasets/zernach/2018-airplane-flights
 * Data Type: CSV
 
-Short description of the DataSource.
+I find a flight dataset in the kaggle. I have to use https://pirateweather.net/ to get the weather informations of the 2018.
 
 ## Work Packages
 
 <!-- List of work packages ordered sequentially, each pointing to an issue with more details. -->
 
-1. Example Issue [#1][i1]
+1. working with the https://pirateweather.net/ [#1][i1]
 2. ...
 
-[i1]: https://github.com/jvalue/made-template/issues/1
+[i1]: https://github.com/behroozbc/made-project/issues/1
