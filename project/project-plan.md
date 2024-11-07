@@ -2,17 +2,17 @@
 
 ## Title
 <!-- Give your project a short title. -->
-colder days, cheaper tickets?
+Colder days, cheaper tickets?
 
 ## Main Question
 
 <!-- Think about one main question you want to answer based on the data. -->
-1. Is the weather conditions influnce on plan ticket price?
+1. Is the weather conditions influence on plan ticket price?
 
 ## Description
 
 <!-- Describe your data science project in max. 200 words. Consider writing about why and how you attempt it. -->
-The flight ticket' prices vary in diffrent time of year. I want to find a relation between the weather temperature and the price of tickets. 
+The flight ticket's prices vary in different time of year. I want to find a relation between the weather temperature and the price of tickets. 
 ## Datasources
 
 <!-- Describe each datasources you plan to use in a section. Use the prefic "DatasourceX" where X is the id of the datasource. -->
@@ -26,7 +26,7 @@ The flight ticket' prices vary in diffrent time of year. I want to find a relati
 * Data URL: I don't know how to download the data.
 * Data Type: ??
 
-I find a flight dataset in the kaggle. I have to use https://pirateweather.net/ to get the weather informations of the 2018.
+I find a flight dataset in the Kaggle. I have to use https://pirateweather.net/ to get the weather information of the 2018.
 
 ## Work Packages
 
