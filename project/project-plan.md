@@ -2,12 +2,12 @@
 
 ## Title
 <!-- Give your project a short title. -->
-Awesome MADE project.
+colder days, cheaper tickets?
 
 ## Main Question
 
 <!-- Think about one main question you want to answer based on the data. -->
-1. Does writing an example question help students write better project plans?
+1. Is the weather conditions influnce on plan ticket?
 
 ## Description
 
