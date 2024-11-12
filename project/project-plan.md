@@ -33,6 +33,7 @@ I find a flight dataset in the Kaggle. I have to use https://pirateweather.net/ 
 <!-- List of work packages ordered sequentially, each pointing to an issue with more details. -->
 
 1. working with the https://pirateweather.net/ [#1][i1]
-2. ...
+2. download flight information [#2][i2]
 
 [i1]: https://github.com/behroozbc/made-project/issues/1
+[i2]: https://github.com/behroozbc/made-project/issues/2
