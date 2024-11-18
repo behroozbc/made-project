@@ -66,8 +66,8 @@ pipeline Exercise3Pipline {
         ->RenameHeadersBatchSec
         ->SelectDataRange
         ->BondTableMaker
-        ->GdpPerCapitaTableSaver;
+        ->BondIssuanceTableSaver;
     SelectDataRange
         ->GdpTableMaker
-        ->BondIssuanceTableSaver;
+        ->GdpPerCapitaTableSaver;
 }
