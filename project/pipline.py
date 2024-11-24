@@ -13,17 +13,12 @@ path = kagglehub.dataset_download("behroozbc/average-day-weather-for-2018")
 for file in os.listdir(path):
     filename=os.path.basename(file)
     shutil.copy(os.path.join(path,file),f"data/{filename}")
-df= pd.read_csv('data\Avg-day-2018.csv')
-df=df[['DATE','DailyAverageDewPointTemperature']]
-meanWeathers=[]
-for quarter in QuarterRange:
-    quraterRange=df[(df['DATE'] > quarter['start']) & (df['DATE'] < quarter['end'])]
-    meanWeathers.append({'AvgTemperature':quraterRange['DailyAverageDewPointTemperature'].astype(float).mean(),'quarter':quarter['index']})
-pd.DataFrame(meanWeathers).to_csv('data\Avg-day-2018.csv')
-df=pd.read_csv('data\Cleaned_2018_Flights.csv')
+weatherdf= pd.read_csv('data\Avg-day-2018.csv')[['DATE','DailyAverageDewPointTemperature']]
+flightsdf=pd.read_csv('data\Cleaned_2018_Flights.csv')
 resultdf=[]
 for quarter in QuarterRange:
-    quraterRange=df[df['Quarter']==quarter['index']]
-    resultdf.append({'PricePerMiles':((quraterRange['PricePerTicket'].astype(float))/quraterRange['Miles'].astype(float)).mean(),'quarter':quarter['index']})
+    quraterRange=weatherdf[(weatherdf['DATE'] > quarter['start']) & (weatherdf['DATE'] < quarter['end'])]
+    flights_quarter_range=flightsdf[flightsdf['Quarter']==quarter['index']]
+    resultdf.append({'AvgTemperature':quraterRange['DailyAverageDewPointTemperature'].astype(float).mean(),'PricePerMiles':((flights_quarter_range['PricePerTicket'].astype(float))/flights_quarter_range['Miles'].astype(float)).mean(),'quarter':quarter['index']})
 
-pd.DataFrame(resultdf).to_csv('data\Cleaned_2018_Flights.csv')
+pd.DataFrame(resultdf).to_csv('data\\final.csv')
