@@ -1,0 +1,95 @@
+pipeline Exercise4Pipeline {
+
+    block ZipDown oftype HttpExtractor {
+        url: "https://www.mowesta.com/data/measure/mowesta-dataset-20221107.zip";
+    }
+    block UnzipFile oftype ArchiveInterpreter {
+        archiveType: "zip";
+    }
+    block FindFile oftype FilePicker {
+        path: "/data.csv";
+    }
+    block RawDataReader oftype TextFileInterpreter { }
+    block Parser oftype CSVInterpreter {
+        delimiter: ";";
+    }
+    block RemoveUnuseCol oftype ColumnDeleter {
+        delete: [ column F, column G, column H, column I
+        ];
+    }
+    block TranslateHeaders oftype CellWriter {
+        at: range A1:F1;
+        write: [
+            "id",
+            "producer",
+            "model",
+            "month",
+            "temperature",
+            "battery_temperature"
+        ];
+    }
+    block TConverter oftype TableTransformer {
+        inputColumns: [
+            "temperature"
+        ];
+        outputColumn: "temperature";
+        uses: CelsiusToFahrenheit;
+    }
+    block BTConverter oftype TableTransformer {
+        inputColumns: [
+            "battery_temperature"
+        ];
+        outputColumn: "battery_temperature";
+        uses: CelsiusToFahrenheit;
+    }
+    transform CelsiusToFahrenheit {
+        from tempCelsius oftype decimal;
+        to tempFahrenheit oftype decimal;
+        tempFahrenheit: (tempCelsius * 9/5) + 32;
+    }
+    valuetype DeviceIdChecker oftype integer {
+        constraints: [
+            PositiveIntegerConstraint
+        ];
+    }
+
+    valuetype MonthChecker oftype integer {
+        constraints: [
+            MonthConstraint
+        ];
+    }
+    block DataTableInterpreter oftype TableInterpreter {
+        header: true;
+        columns: [
+            "id" oftype DeviceIdChecker,
+            "producer" oftype text,
+            "model" oftype text,
+            "month" oftype MonthChecker,
+            "temperature" oftype decimal,
+            "battery_temperature" oftype decimal
+        ];
+    }
+    block DataLoader oftype SQLiteLoader {
+        table: "temperatures";
+        file: "./temperatures.sqlite";
+    }
+    ZipDown
+        ->UnzipFile
+        ->FindFile
+        ->RawDataReader
+        ->Parser
+        ->RemoveUnuseCol
+        ->TranslateHeaders
+        ->DataTableInterpreter
+        ->BTConverter
+        ->TConverter
+        ->DataLoader;
+}
+publish constraint MonthConstraint oftype RangeConstraint {
+    lowerBound: 0;
+    upperBound: 12;
+}
+    publish constraint PositiveIntegerConstraint oftype RangeConstraint {
+    lowerBound: 0;
+    lowerBoundInclusive: false;
+}
