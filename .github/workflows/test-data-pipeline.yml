@@ -18,4 +18,4 @@ jobs:
             with:
                 python-version: '3.10'
           - name: Run Python script
-            run: pwd;ls
+            run: cd main;pwd;ls
