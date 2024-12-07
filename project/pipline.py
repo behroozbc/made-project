@@ -9,7 +9,7 @@ def download_dataset(name:str):
     path=kagglehub.dataset_download(name)
     return os.path.join(path,os.listdir(path)[0])
 def copy_to_data(fullPath2File:str):
-    savePath=f"{os.getcwd()}/data/{os.path.basename(fullPath2File)}"
+    savePath=f"{os.getcwd()}/main/data/{os.path.basename(fullPath2File)}"
     shutil.copy(fullPath2File,savePath)
     return savePath
 def read_file(path2localfile):
