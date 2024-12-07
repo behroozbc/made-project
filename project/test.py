@@ -3,7 +3,7 @@ import unittest.mock as mock
 import pandas as pd
 import os
 from pandas.testing import assert_frame_equal 
-test_csv_path='.\\main\\project\\test-files\\test.csv'
+test_csv_path='.\\test-files\\test.csv'
 
 def test_transform():
     weatherdf=pd.DataFrame([['2018/01/02',1],['2018/01/03',2],['2018/05/02',1],['2018/05/03',2],['2018/08/02',1],['2018/08/03',2],['2018/11/02',1],['2018/11/03',2]],columns=['DATE','DailyAverageDewPointTemperature'])
