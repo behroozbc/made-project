@@ -3,7 +3,7 @@ import unittest.mock as mock
 import pandas as pd
 import os
 from pandas.testing import assert_frame_equal 
-test_csv_path=os.getcwd()+'main/project/test-files/test.csv'
+test_csv_path=os.getcwd()+'/main/project/test-files/test.csv'
 
 def test_transform():
     weatherdf=pd.DataFrame([['2018/01/02',1],['2018/01/03',2],['2018/05/02',1],['2018/05/03',2],['2018/08/02',1],['2018/08/03',2],['2018/11/02',1],['2018/11/03',2]],columns=['DATE','DailyAverageDewPointTemperature'])
@@ -17,7 +17,7 @@ def test_save_processed_data():
         to_csv_mock.assert_called_once()
 def test_copy_to_data():
     path=copy_to_data(test_csv_path)
-    assert os.path.exists(os.path.abspath(path))
+    assert os.path.exists(os.getcwd()+'/'+path)
 def test_read_file():
     testfile= read_file(test_csv_path)
     actualFile=pd.read_csv(test_csv_path)
