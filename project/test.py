@@ -17,7 +17,7 @@ def test_save_processed_data():
         to_csv_mock.assert_called_once()
 def test_copy_to_data():
     path=copy_to_data(test_csv_path)
-    assert os.path.exists(path)
+    assert os.path.exists(os.path.abspath(path))
 def test_read_file():
     testfile= read_file(test_csv_path)
     actualFile=pd.read_csv(test_csv_path)
