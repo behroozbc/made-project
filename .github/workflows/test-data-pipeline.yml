@@ -14,21 +14,10 @@ jobs:
             with:
                 path: main
             
-          - name: Set up Miniconda 
-            uses: conda-incubator/setup-miniconda@v2
-            with: 
-                python-version: 3.9 
-                auto-update-conda: true 
-                activate-environment: made_env 
-                environment-file: main/environment.yml # The path to your environment.yml file use-mamba: true # Optional: for faster environment resolution using mamba
-          - name: Initialize and activate Conda environment
-            run: |
-             conda init bash
-             source ~/.bashrc
-             conda activate made_env 
-             conda info
-             conda list
-          
+          - name: Install Python dependencies
+            uses: py-actions/py-dependency-install@v4
+            with:
+                path: "main/requirements.txt"          
           - name: Run Python script
             run: | 
                 chmod +x main/project/test.sh    
