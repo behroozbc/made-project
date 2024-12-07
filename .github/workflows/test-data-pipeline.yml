@@ -20,5 +20,4 @@ jobs:
                 path: "main/requirements.txt"          
           - name: Run Python script
             run: | 
-                chmod +x main/project/test.sh    
-                main/project/test.sh
+               sh main/project/test.sh
