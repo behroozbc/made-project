@@ -22,4 +22,6 @@ jobs:
                 activate-environment: made_env 
                 environment-file: main/environment.yml # The path to your environment.yml file use-mamba: true # Optional: for faster environment resolution using mamba
           - name: Run Python script
-            run: sh main/project/test.sh
+            run: | 
+                chmod +x main/project/test.sh    
+                main/project/test.sh
