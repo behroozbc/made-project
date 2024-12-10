@@ -8,12 +8,12 @@ pipeline Exercise5Pipeline {
     block FindFile oftype FilePicker {
         path: "/stops.txt";
     }
-    block DataTextFileInterpreter oftype TextFileInterpreter { }
+    block DataTextFileInterpreter oftype TextFileInterpreter {  }
     block DataCSVInterpreter oftype CSVInterpreter {
         delimiter: ",";
         enclosing: '"';
     }
-    valuetype GeoLocationChecker oftype integer {
+    valuetype GeoLocationChecker oftype decimal {
         constraints: [
             GeoLocationConstraint
         ];
@@ -50,7 +50,4 @@ publish constraint GeoLocationConstraint oftype RangeConstraint {
     lowerBound: -90;
     upperBound: 90;
 }
-    publish constraint ZoneIdConstraint oftype RangeConstraint {
-    lowerBound: 1925;
-    upperBound: 1925;
-}
+publish constraint ZoneIdConstraint on integer: value==1925;
