@@ -124,15 +124,24 @@ hideInToc: true
 ---
 
 # Correlation Analysis Results
+<style>
+img{
+  height:300px;
+  margin: 0 auto ;
+}
+</style>
 
 <v-clicks>
 
 - **Pearson Correlation Coefficient:** 
   - **Result:** -0.65, indicating an inverse relationship between temperature and price per mile.
   - **Implication:** As temperature decreases, ticket prices per mile tend to increase.
-
+  
 </v-clicks>
+<v-click>
 
+![chart](./imgs/chart.png)
+</v-click>
 ---
 
 # Conclusions
