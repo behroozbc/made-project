@@ -1,19 +1,27 @@
 ---
 layout: cover
 theme: academic
-coverBackgroundUrl: ./imgs/image.jpg
+coverBackgroundUrl: /imgs/image.jpg
+title: Colder Days, Cheaper Tickets?
 transition: slide-left
 coverAuthor: Behrooz bozorgchamy
+themeConfig:
+  paginationX: r
+  paginationY: t
+  
 ---
 
 # Colder Days, Cheaper Tickets?
+<Pagination classNames="text-gray-300" />
 
-
+---
+layout: table-of-contents
+hideInToc: true
 ---
 
 # Table of Contents
 
-<toc></toc>
+
 
 ---
 
@@ -175,8 +183,5 @@ coverAuthor: Behrooz bozorgchamy
 
 # Thank You
 
-<v-click>
 
 - **Questions?** 
-
-</v-click>
