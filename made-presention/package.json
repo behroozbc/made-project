@@ -5,8 +5,7 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
-    "export": "slidev export --dark --output=../project/slides.pdf",
-    "export-test": "slidev export --per-slide"
+    "export": "slidev export --dark --per-slide --output=../project/slides.pdf"
   },
   "dependencies": {
     "@slidev/cli": "^51.0.1",
