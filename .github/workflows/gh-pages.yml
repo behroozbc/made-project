@@ -23,8 +23,8 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
     - name: Build
-      working-directory: made-presentation
       run: |
+        cd made-presentation
         npm ci
         npm run-script build
     - name: Deploy
