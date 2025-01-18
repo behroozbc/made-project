@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-
+defaults:
+  run:
+    shell: bash
+    working-directory: made-presention
 jobs:
   build-and-deploy-gh-page:
     runs-on: ubuntu-latest
