@@ -15,12 +15,17 @@ This project investigates whether the cost of flight tickets in North America an
 - **Pipline**: 
 
 	- Mapped weather data to flight data by quarter.
+
 	- Develpoed by Python.
-	- Use kaggle and panda.
+
+	- Use kaggle and panda packages.
+
 	- Save the data in CSV file.
+
 	- Calculated average temperature and price per mile for each quarter.
 
 - **Analysis Method**: 
+
   - Used Pearson Correlation Coefficient (PCC) to assess the correlation between temperature and ticket price.
 
 - **Findings**: 
