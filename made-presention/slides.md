@@ -1,7 +1,7 @@
 ---
 layout: cover
 theme: academic
-coverBackgroundUrl: /imgs/image.jpg
+coverBackgroundUrl: ./imgs/image.jpg
 title: Colder Days, Cheaper Tickets?
 transition: slide-left
 coverAuthor: Behrooz bozorgchamy
