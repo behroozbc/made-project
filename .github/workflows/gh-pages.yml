@@ -24,6 +24,7 @@ jobs:
           ${{ runner.os }}-node-
     - name: Build
       working-directory: /made-presentation
+      shell: bash
       run: |
         npm ci
         npm run-script build
