@@ -25,7 +25,6 @@ jobs:
     - name: Build
       working-directory: made-presentation
       run: |
-        ls
         npm ci
         npm run-script build
     - name: Deploy
