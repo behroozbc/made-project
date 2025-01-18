@@ -23,7 +23,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
     - name: Build
-      working-directory: made-presentation
+      working-directory: ./made-presentation
       run: |
         npm ci
         npm run-script build
