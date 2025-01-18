@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-
+defaults:
+  run:
+    shell: bash
+    working-directory: made-presentation
 jobs:
   build-and-deploy-gh-page:
     runs-on: ubuntu-latest
@@ -23,7 +26,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
     - name: Build
-      working-directory: ./made-presentation
       shell: bash
       run: |
         npm ci
