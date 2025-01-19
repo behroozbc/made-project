@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This project investigates whether the cost of flight tickets in North America and the changes are related to temperature. By analyzing flight and weather data from 2018, we aim to determine if there's a relation between temperature and ticket prices.
+This project looks into the cost of flight tickets in North America, and the changes are related to temperature. By inspecting to flight and weather data from 2018, I aim to determine if there's a relation between temperature and ticket prices.
 
 **Summary:**
 
