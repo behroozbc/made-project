@@ -2,7 +2,7 @@
 
 ## Project Description
 
-Does anybody tell you flight tickets are cheaper in winter? This project looks into this Rumor By digging into the cost of flight tickets in North America, and the changes are related to temperature. By inspecting flight and weather data from 2018, I aim to determine if there's a relation between temperature and ticket prices.
+Does anybody tell you flight tickets are cheaper in winter? This project looks into this Rumor By digging into the cost of flight tickets in North America, and the changes are related to temperature. By inspecting flight and weather data from 2018, I aim to determine if there's a relation between temperature and ticket prices. You can look into slides of this project by [this link](https://behroozbc.github.io/made-project/).
 
 
 **Summary:**
