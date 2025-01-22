@@ -73,9 +73,9 @@ hideInToc: true
 <v-clicks>
 
 - **Data Downloading:** 
-  - Python script to automatically download and manage datasets from Kaggle.
+  - The Kaggle package download the datasets from the Kaggle.
 - **Data Cleaning:** 
-  - Ensured datasets were clean with no missing values, which simplified the analysis.
+  - The datasets are clear which I did not implement this part.
 - **Feature Mapping:**
   - Converted 'DATE' from weather data to match 'Quarter' in flight data for integration.
 - **Aggregation:**
