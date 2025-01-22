@@ -1,7 +1,7 @@
 ---
 layout: cover
 theme: academic
-coverBackgroundUrl: ./imgs/image.jpg
+coverBackgroundUrl: https://images.unsplash.com/photo-1525703758695-469daeaad6c1?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 title: Colder Days, Cheaper Tickets?
 transition: slide-left
 coverAuthor: Behrooz bozorgchamy
@@ -12,6 +12,8 @@ themeConfig:
 ---
 
 # Colder Days, Cheaper Tickets?
+
+#### Methods of Advanced Data Engineering   
 <Pagination classNames="text-gray-300" />
 
 ---
@@ -30,7 +32,9 @@ hideInToc: true
 <v-clicks>
 
 - **Objective:** Investigate if air travel tickets are cheaper during colder months in North America.
-- **Context:** Common advice suggests traveling in winter for cheaper tickets, but is this true?
+
+
+- **Why:** Common advice suggests traveling in winter for cheaper tickets, but is this true?
 
 </v-clicks>
 
@@ -57,14 +61,26 @@ hideInToc: true
 
 <v-clicks>
 
-- **Data Preparation:** 
-  - Downloaded and cleaned datasets from Kaggle.
-- **Mapping:** 
-  - Mapped weather data to flight quarters.
-- **Analysis:** 
-  - Calculated average temperature and price per mile for each quarter.
+1. **Data Preparation:** 
+    - Download the datasets from Kaggle.
+2. **Mapping:** 
+    - Mapped weather data to flight quarters.
+3. **Analysis:** 
+    - Calculated average temperature and price per mile for each quarter.
 
 </v-clicks>
+<br>
+<v-click>
+
+```mermaid 
+flowchart LR
+    Aval[Data Preparation]
+    Dovom[Mapping]
+    Sevom[Analysis]
+    Aval --> Dovom--> Sevom
+```
+
+</v-click>
 
 ---
 
@@ -72,18 +88,18 @@ hideInToc: true
 
 <v-clicks>
 
-- **Data Downloading:** 
-  - The Kaggle package download the datasets from the Kaggle.
-- **Data Cleaning:** 
-  - The datasets are clear which I did not implement this part.
-- **Feature Mapping:**
-  - Converted 'DATE' from weather data to match 'Quarter' in flight data for integration.
-- **Aggregation:**
-  - Computed average temperature and price per mile by quarter to match data granularity.
-- **Output Generation:**
-  - Produced a new dataset with 'AvgTemperature', 'PricePerMiles', and 'Quarter' as features.
-- **Output**:
-    - CSV file selected to store the output of pipeline because it produces a few rows as output.
+1. **Data Downloading:** 
+    - The Kaggle package download the datasets from the Kaggle.
+2. **Data Cleaning:** 
+    - The datasets are clear which I did not implement this part.
+3. **Feature Mapping:**
+    - Converted 'DATE' from weather data to match 'Quarter' in flight data for integration.
+4. **Aggregation:**
+    - Computed average temperature and price per mile by quarter to match data.
+5. **Output Generation:**
+    - Produced a new dataset with 'AvgTemperature', 'PricePerMiles', and 'Quarter' as features.
+6. **Save**:
+      - CSV file selected to store the output of pipeline because it produces a few rows as output.
 </v-clicks>
 
 
@@ -172,6 +188,7 @@ img{
 <v-clicks>
 
 - **Data Granularity:** Data by quarter, not by month or day, which might miss short-term fluctuations.
+
 - **Holiday Effects:** No consideration for public or school holidays which influence price.
 
 </v-clicks>
@@ -183,14 +200,18 @@ img{
 <v-clicks>
 
 - **Enhance Data:** Monthly or daily flight data for more precision.
+
 - **Include Holidays:** Incorporate holidays as variables in analysis.
+
 - **Operational Costs:** Investigate how operational costs affect pricing.
 
 </v-clicks>
 
 ---
+class: text-center
+---
 
-# Thank You
+# Thank You for your attention.
 
 
-- **Questions?** 
+ **Questions?** 
