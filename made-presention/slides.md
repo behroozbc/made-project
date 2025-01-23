@@ -4,7 +4,7 @@ theme: academic
 coverBackgroundUrl: https://images.unsplash.com/photo-1525703758695-469daeaad6c1?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 title: Colder Days, Cheaper Tickets?
 transition: slide-left
-coverAuthor: Behrooz bozorgchamy
+coverAuthor: Behrooz Bozorgchamy
 themeConfig:
   paginationX: r
   paginationY: t
@@ -62,12 +62,13 @@ hideInToc: true
 <v-clicks>
 
 1. **Data Preparation:** 
-    - Download the datasets from Kaggle.
+    - Download the datasets from Kaggle and clean it.
 2. **Mapping:** 
     - Mapped weather data to flight quarters.
 3. **Analysis:** 
     - Calculated average temperature and price per mile for each quarter.
-
+4. **Save**
+    - Save the output of pipeline
 </v-clicks>
 <br>
 <v-click>
@@ -77,7 +78,8 @@ flowchart LR
     Aval[Data Preparation]
     Dovom[Mapping]
     Sevom[Analysis]
-    Aval --> Dovom--> Sevom
+    Chahram[Save]
+    Aval --> Dovom--> Sevom --> Chahram
 ```
 
 </v-click>
@@ -115,8 +117,8 @@ flowchart LR
   - **What is PCC?** 
     - A measure of the linear correlation between two sets of data.
   - **Range:** 
-    - Values range from -1 to 1.
-  - **Interpretation:**
+    - Values range from -1 to 1 and It is normalize.
+  - **Analysis:**
     - **1:** Perfect positive correlation
     - **-1:** Perfect negative correlation
     - **0:** No correlation
@@ -164,7 +166,11 @@ img{
 
 <v-click>
 
-- **Finding:** Contrary to popular belief, colder temperatures correlate with higher ticket prices.
+- **Finding:** Reject the popular belief, colder temperatures correlate with higher ticket prices.
+</v-click>
+<v-click>
+
+- **Colder Days, Cheaper Tickets?:** No.
 </v-click>
 <v-clicks>
 
